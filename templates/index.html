@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Servicios profesionales de topografía, proyectos y obra pública en Santiago de Anaya, Hidalgo."
+    >
+
+    <title>Topografía y Proyectos Ángeles</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/estilos.css') }}"
+    >
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <nav class="menu">
+
+            <a class="marca" href="{{ url_for('inicio') }}">
+
+                <img
+                    src="{{ url_for('static', filename='img/logo-empresa.jpeg') }}"
+                    alt="Logo de Topografía y Proyectos Ángeles"
+                >
+
+                <span>
+                    Topografía y Proyectos Ángeles
+                </span>
+
+            </a>
+
+            <a
+                class="boton-empresa"
+                href="{{ url_for('empresa') }}"
+            >
+                Empresa
+            </a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="portada">
+
+            <div class="capa-portada"></div>
+
+            <div class="contenido-portada">
+
+                <span class="texto-superior">
+                    Precisión, experiencia y confianza
+                </span>
+
+                <h1>
+                    Topografía que define tu proyecto
+                </h1>
+
+                <p>
+                    Soluciones profesionales para levantamientos,
+                    deslindes, proyectos arquitectónicos, consultoría,
+                    impacto ambiental y obras públicas.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="seccion servicios">
+
+            <div class="encabezado-seccion">
+
+                <span>Nuestros servicios</span>
+
+                <h2>
+                    Soluciones para cada proyecto
+                </h2>
+
+                <p>
+                    Selecciona un servicio para consultar fotografías
+                    de algunos trabajos realizados.
+                </p>
+
+            </div>
+
+            <div class="contenedor-tarjetas">
+
+                {% for slug, datos in servicios.items() %}
+
+                    <article class="tarjeta-servicio">
+
+                        <div class="numero-servicio">
+                            {{ "%02d"|format(loop.index) }}
+                        </div>
+
+                        <h3>
+                            {{ datos.titulo }}
+                        </h3>
+
+                        <p>
+                            {{ datos.descripcion }}
+                        </p>
+
+                        <a
+                            href="{{ url_for('servicio', slug=slug) }}"
+                            class="boton-servicio"
+                        >
+                            Ver trabajos
+                        </a>
+
+                    </article>
+
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+        <section class="seccion ubicacion">
+
+            <div class="informacion-ubicacion">
+
+                <span>Nuestra ubicación</span>
+
+                <h2>
+                    Visítanos en Santiago de Anaya
+                </h2>
+
+                <p class="direccion">
+                    Reforma, Sección Sur, 42642 Santiago de Anaya, Hgo.
+                </p>
+
+                <p>
+                    Estamos disponibles para atender proyectos de
+                    topografía, arquitectura, consultoría y obra pública.
+                </p>
+
+                <a
+                    class="boton boton-azul"
+                    href="https://www.google.com/maps/search/?api=1&query=Reforma%2C%20Secci%C3%B3n%20Sur%2C%2042642%20Santiago%20de%20Anaya%2C%20Hgo."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Abrir en Google Maps
+                </a>
+
+            </div>
+
+            <div class="contenedor-mapa">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Reforma%2C%20Secci%C3%B3n%20Sur%2C%2042642%20Santiago%20de%20Anaya%2C%20Hgo.&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de Topografía y Proyectos Ángeles"
+                >
+                </iframe>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+
+        <div>
+            <strong>
+                Topografía y Proyectos Ángeles
+            </strong>
+
+            <p>
+                Reforma, Sección Sur, Santiago de Anaya, Hidalgo.
+            </p>
+        </div>
+
+        <p>
+            © 2026 Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+    <a
+        class="boton-whatsapp"
+        href="https://wa.me/527713356446"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Enviar mensaje por WhatsApp"
+    >
+        <span class="icono-whatsapp">☏</span>
+        <span class="texto-whatsapp">WhatsApp</span>
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Información de Topografía y Proyectos Ángeles."
+    >
+
+    <title>Empresa | Topografía y Proyectos Ángeles</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/estilos.css') }}"
+    >
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <nav class="menu">
+
+            <a class="marca" href="{{ url_for('inicio') }}">
+
+                <img
+                    src="{{ url_for('static', filename='img/logo-empresa.jpeg') }}"
+                    alt="Logo de Topografía y Proyectos Ángeles"
+                >
+
+                <span>
+                    Topografía y Proyectos Ángeles
+                </span>
+
+            </a>
+
+            <a
+                class="boton-empresa"
+                href="{{ url_for('inicio') }}"
+            >
+                Volver
+            </a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="portada-empresa">
+
+            <div class="contenido-portada-empresa">
+
+                <span>
+                    Conoce nuestra empresa
+                </span>
+
+                <h1>
+                    Topografía y Proyectos Ángeles
+                </h1>
+
+                <p>
+                    Precisión técnica, responsabilidad y soluciones
+                    profesionales para el desarrollo de cada proyecto.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="seccion informacion-empresa">
+
+            <div class="presentacion-empresa">
+
+                <div class="imagen-empresa">
+
+                    <img
+                        src="{{ url_for('static', filename='img/logo-empresa.jpeg') }}"
+                        alt="Topografía y Proyectos Ángeles"
+                    >
+
+                </div>
+
+                <div class="texto-empresa">
+
+                    <span>Quiénes somos</span>
+
+                    <h2>
+                        Experiencia al servicio de tus proyectos
+                    </h2>
+
+                    <p>
+                        topografía y diseño arquitectónico ángeles somos una empresa con 5 años de experiencia, especializada en servicios de topografía, diseño arquitectónico, ingeniería y construcción. nuestro compromiso es proporcionar soluciones técnicas precisas y confiables para el desarrollo de proyectos públicos y privados, garantizando calidad, profesionalismo y atención personalizada en cada servicio.
+contamos con personal capacitado y herramientas tecnológicas que nos permiten ofrecer resultados eficientes, contribuyendo al crecimiento ordenado y sustentable de nuestros clientes y comunidades.
+
+                    </p>
+
+                    <p>
+                        Trabajamos con responsabilidad, precisión y atención
+                        personalizada, utilizando equipo especializado para
+                        obtener resultados confiables en cada proyecto.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="tarjetas-empresa">
+
+                <article class="tarjeta-institucional">
+
+                    <span>01</span>
+
+                    <h3>Misión</h3>
+
+                    <p>
+                        brindar servicios de topografía, arquitectura e ingeniería con altos estándares de calidad, precisión y responsabilidad, ofreciendo soluciones integrales que satisfagan las necesidades de nuestros clientes y contribuyan al desarrollo de infraestructura segura y funcional.
+                    </p>
+
+                </article>
+
+                <article class="tarjeta-institucional">
+
+                    <span>02</span>
+
+                    <h3>Visión</h3>
+
+                    <p>
+                        ser una empresa líder en el sector de la topografía, arquitectura y construcción en el estado de hidalgo y a nivel regional, reconocida por la excelencia de nuestros servicios, la innovación tecnológica y la confianza de nuestros clientes.
+                    </p>
+
+                </article>
+
+                <article class="tarjeta-institucional">
+
+                    <span>03</span>
+
+                    <h3>Objetivo general</h3>
+
+                    <p>
+                        Desarrollar proyectos técnicos confiables que
+                        contribuyan al crecimiento ordenado de propiedades,
+                        comunidades, infraestructura y espacios habitables.
+                    </p>
+
+                </article>
+
+                <article class="tarjeta-institucional">
+
+                    <span>04</span>
+
+                    <h3>Objetivos específicos</h3>
+
+                    <ul>
+                        <li>
+                            Proporcionar mediciones y planos precisos.
+                        </li>
+
+                        <li>
+                            Ofrecer atención clara y personalizada.
+                        </li>
+
+                        <li>
+                            Cumplir con los requerimientos técnicos
+                            de cada proyecto.
+                        </li>
+
+                        <li>
+                            Utilizar equipo y procedimientos adecuados.
+                        </li>
+
+                        <li>
+                            Entregar resultados profesionales y confiables.
+                        </li>
+                    </ul>
+
+                </article>
+
+                <article class="tarjeta-institucional">
+
+                    <span>05</span>
+
+                    <h3>Valores</h3>
+
+                    <ul>
+                        <li>Responsabilidad.</li>
+                        <li>Honestidad.</li>
+                        <li>Innovación.</li>
+                        <li>Compromiso.</li>
+                        <li>Calidad.</li>
+                        <li>Profesionalismo.</li>
+                    </ul>
+
+                </article>
+
+                <article class="tarjeta-institucional">
+
+                    <span>06</span>
+
+                    <h3>Nuestro compromiso</h3>
+
+                    <p>
+                        Acompañar a cada cliente desde la planeación hasta
+                        la ejecución de su proyecto, proporcionando
+                        información técnica clara y resultados que generen
+                        confianza.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+
+        <div>
+            <strong>
+                Topografía y Proyectos Ángeles
+            </strong>
+
+            <p>
+                Reforma, Sección Sur, Santiago de Anaya, Hidalgo.
+            </p>
+        </div>
+
+        <p>
+            © 2026 Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+    <a
+        class="boton-whatsapp"
+        href="https://wa.me/527713356446"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Enviar mensaje por WhatsApp"
+    >
+        <span class="icono-whatsapp">☏</span>
+        <span class="texto-whatsapp">WhatsApp</span>
+    </a>
+
+</body>
+</html>

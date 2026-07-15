@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {{ servicio.titulo }} | Topografía y Proyectos Ángeles
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/estilos.css') }}"
+    >
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <nav class="menu">
+
+            <a class="marca" href="{{ url_for('inicio') }}">
+
+                <img
+                    src="{{ url_for('static', filename='img/logo-empresa.jpeg') }}"
+                    alt="Logo de Topografía y Proyectos Ángeles"
+                >
+
+                <span>
+                    Topografía y Proyectos Ángeles
+                </span>
+
+            </a>
+
+            <div class="acciones-encabezado">
+
+                <a
+                    class="enlace-simple"
+                    href="{{ url_for('inicio') }}"
+                >
+                    Volver
+                </a>
+
+                <a
+                    class="boton-empresa"
+                    href="{{ url_for('empresa') }}"
+                >
+                    Empresa
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="portada-servicio">
+
+            <div class="contenido-portada-servicio">
+
+                <span>
+                    Nuestros trabajos
+                </span>
+
+                <h1>
+                    {{ servicio.titulo }}
+                </h1>
+
+                <p>
+                    {{ servicio.descripcion }}
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="seccion trabajos-servicio">
+
+            <div class="encabezado-seccion">
+
+                <span>Experiencia y resultados</span>
+
+                <h2>
+                    Trabajos realizados
+                </h2>
+
+                <p>
+                    Fotografías de algunos trabajos realizados
+                    en este servicio.
+                </p>
+
+            </div>
+
+            {% if imagenes %}
+
+                <div class="galeria-servicio">
+
+                    {% for imagen in imagenes %}
+
+                        <figure class="fotografia-trabajo">
+
+                            <img
+                                src="{{ url_for('static', filename=imagen) }}"
+                                alt="{{ servicio.titulo }}"
+                                loading="lazy"
+                            >
+
+                        </figure>
+
+                    {% endfor %}
+
+                </div>
+
+            {% else %}
+
+                <div class="sin-imagenes">
+
+                    <h3>
+                        Próximamente agregaremos fotografías
+                    </h3>
+
+                    <p>
+                        Todavía no se han colocado imágenes
+                        para este servicio.
+                    </p>
+
+                </div>
+
+            {% endif %}
+
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+
+        <div>
+            <strong>
+                Topografía y Proyectos Ángeles
+            </strong>
+
+            <p>
+                Reforma, Sección Sur, Santiago de Anaya, Hidalgo.
+            </p>
+        </div>
+
+        <p>
+            © 2026 Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+    <a
+        class="boton-whatsapp"
+        href="https://wa.me/527713356446"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Enviar mensaje por WhatsApp"
+    >
+        <span class="icono-whatsapp">☏</span>
+        <span class="texto-whatsapp">WhatsApp</span>
+    </a>
+
+</body>
+</html>
