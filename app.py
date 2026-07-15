@@ -40,10 +40,10 @@ SERVICIOS = {
         "carpeta": "consultoria",
     },
     "manifiestos-de-impacto-ambiental": {
-        "titulo": "Manifiestos de impacto ambiental",
+        "titulo": "Manifiestos de Impacto Ambiental",
         "descripcion": (
-            "Elaboramos estudios y manifiestos de impacto ambiental "
-            "para proyectos públicos y privados."
+            "Elaboramos estudios de manifiesto de impacto ambiental "
+            "para obras públicas y privadas."
         ),
         "carpeta": "impacto-ambiental",
     },
